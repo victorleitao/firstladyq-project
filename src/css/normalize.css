@@ -1,0 +1,23 @@
+html {
+  font-family: 'Roboto', sans-serif;
+  color: var(--white);
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+}
+
+.login-buttons button {
+  font-size: 1.3rem;
+  color: var(--white);
+}
+
+.nav-container button {
+  font-size: 1.3rem;
+  color: var(--black);
+}
+
+:root {
+  --black: #111;
+  --white: #eaeaea;
+}

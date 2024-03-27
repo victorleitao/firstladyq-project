@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+html {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  margin: 0;
+  padding: 12px 24px;
+  text-align: center;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--black),
+    var(--dark-blue)
+  );
+}
+
+.login-buttons,
+.nav-container {
+  width: 100%;
+  margin-top: 16px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 47%;
+  padding: 8px;
+  height: 72px;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: var(--dark-green);
+}
+
+.nav-button {
+  background: var(--light-blue);
+  height: 48px;
+  border-radius: 8px 8px 0 0;
+}
+
+.nav-button.active {
+  background: var(--light-green);
+}
+
+.nav-button i.fa-flask {
+  margin-right: 8px;
+}
+
+.nav-button i.fa-hammer {
+  margin-right: 8px;
+}
+
+#scienceButton {
+  width: 40%;
+}
+
+#constructionButton {
+  width: 54%;
+}
+
+.main-container {
+  background: var(--light-green);
+  position: absolute;
+  top: 218px;
+  right: 24px;
+  bottom: 20px;
+  left: 24px;
+}
+
+.science-container {
+  border-radius: 0 8px 8px 8px;
+  z-index: 1;
+}
+
+.construction-container {
+  background: var(--light-blue);
+  border-radius: 8px 0 8px 8px;
+  z-index: 0;
+}
+
+.footer {
+  color: var(--black);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+:root{
+  --black: #111;
+  --white: #eaeaea;
+  --dark-blue: #35374B;
+  --dark-green: #344955;
+  --light-blue: #50727B;
+  --light-green: #78A083;
+}
