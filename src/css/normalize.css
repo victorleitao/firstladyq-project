@@ -12,12 +12,17 @@ button {
   color: var(--white);
 }
 
-.nav-container button {
+.top-nav button {
   font-size: 1.3rem;
   color: var(--black);
 }
 
+#versionText {
+  color: var(--black);
+}
+
 :root {
+  --light-green: #78A083;
   --black: #111;
   --white: #eaeaea;
 }

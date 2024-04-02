@@ -13,7 +13,7 @@ html {
   right: 0;
   overflow: auto;
   margin: 0;
-  padding: 12px 24px;
+  padding: 12px var(--side-margin);
   text-align: center;
 }
 
@@ -26,7 +26,8 @@ body {
 }
 
 .login-buttons,
-.nav-container {
+.top-nav,
+.footer-nav {
   width: 100%;
   margin-top: 16px;
   display: inline-flex;
@@ -45,8 +46,9 @@ button {
 }
 
 .nav-button {
+  width: 20%;
   background: var(--light-blue);
-  height: 48px;
+  height: 72px;
   border-radius: 8px 8px 0 0;
 }
 
@@ -54,29 +56,22 @@ button {
   background: var(--light-green);
 }
 
-.nav-button i.fa-flask {
-  margin-right: 8px;
+.top-nav-icon {
+  color: var(--black);
 }
 
-.nav-button i.fa-hammer {
-  margin-right: 8px;
-}
-
-#scienceButton {
-  width: 40%;
-}
-
-#constructionButton {
-  width: 54%;
+.top-nav-icon,
+.footer-nav-icon {
+  font-size: 2.2rem;
 }
 
 .main-container {
   background: var(--light-green);
   position: absolute;
-  top: 218px;
-  right: 24px;
-  bottom: 20px;
-  left: 24px;
+  top: 242px;
+  right: var(--side-margin);
+  bottom: 108px;
+  left: var(--side-margin);
 }
 
 .science-container {
@@ -91,10 +86,32 @@ button {
 }
 
 .footer {
-  color: var(--black);
+  height: 108px;
   position: absolute;
-  bottom: 0;
+  left: 0;
   right: 0;
+  bottom: 0;
+}
+
+.footer-nav {
+  height: 72px;
+  padding: 0 var(--side-margin);
+}
+
+.footer-nav-button {
+  width: 20%;
+  min-height: 72px;
+  max-height: 72px;
+}
+
+.footer-nav-icon {
+  color: var(--light-green);
+}
+
+#versionText {
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }
 
 :root{
@@ -104,4 +121,5 @@ button {
   --dark-green: #344955;
   --light-blue: #50727B;
   --light-green: #78A083;
+  --side-margin: 20px;
 }
