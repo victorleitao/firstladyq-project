@@ -25,6 +25,19 @@ body {
   );
 }
 
+#infoButton {
+  min-width: 48px;
+  max-width: 48px;
+  min-height: 48px;
+  max-height: 48px;
+  font-size: 1.8rem;
+  background: transparent;
+  position: fixed;
+  color: var(--white-trans);
+  top: 4px;
+  right: 4px;
+}
+
 .login-buttons,
 .top-nav,
 .footer-nav {
@@ -65,24 +78,72 @@ button {
   font-size: 2.2rem;
 }
 
-.main-container {
-  background: var(--light-green);
+.table-container {
   position: absolute;
+  border-radius: 0 0 8px 8px;
+  background: var(--light-blue);
   top: 242px;
-  right: var(--side-margin);
   bottom: 108px;
+  right: var(--side-margin);
   left: var(--side-margin);
+  z-index: 0;
+  overflow: auto;
+}
+
+.table-container.active {
+  background: var(--light-green);
+  z-index: 1;
 }
 
 .science-container {
   border-radius: 0 8px 8px 8px;
-  z-index: 1;
 }
 
-.construction-container {
-  background: var(--light-blue);
+.construction-container,
+.troop-container {
+  border-radius: 8px;
+}
+
+.heal-container {
   border-radius: 8px 0 8px 8px;
-  z-index: 0;
+}
+
+.table {
+  width: 100%;
+}
+
+.table-header,
+.table-row {
+  height: 44px;
+}
+
+.table-header,
+.table-row:nth-child(odd) {
+  background: var(--table-row-color-odd);
+}
+
+.table-sequence {
+  min-width: 36px;
+  width: 36px;
+  max-width: 36px;
+}
+
+.first-sequence {
+  border-radius: 8px 0 0 0;
+}
+
+.table-skip {
+  font-size: 1.7rem;
+  min-width: 44px;
+  width: 44px;
+  max-width: 44px;
+  border-radius: 0 8px 8px 0;
+  color: var(--inactive-skip-marker);
+  background: var(--inactive-skip);
+}
+
+.table-skip.active {
+  background: var(--red);
 }
 
 .footer {
@@ -117,9 +178,14 @@ button {
 :root{
   --black: #111;
   --white: #eaeaea;
+  --white-trans: #eaeaea55;
   --dark-blue: #35374B;
   --dark-green: #344955;
   --light-blue: #50727B;
   --light-green: #78A083;
+  --red: #9a1b1b;
+  --inactive-skip: #666666;
+  --inactive-skip-marker: #8d8d8d;
   --side-margin: 20px;
+  --table-row-color-odd: #48484869;
 }

@@ -12,9 +12,8 @@ button {
   color: var(--white);
 }
 
-.top-nav button {
+.table {
   font-size: 1.3rem;
-  color: var(--black);
 }
 
 #versionText {
